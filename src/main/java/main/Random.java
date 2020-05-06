@@ -6,8 +6,6 @@ public class Random {
 
     public static String get(Map<String, Integer> options) {
         int randomNumber = (int) Math.round(Math.random() * 100);
-//        System.out.println("options: " + options);
-//        System.out.println("Random: " + randomNumber);
         int RAISE;
         int CALL;
 
