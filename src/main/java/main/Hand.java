@@ -46,40 +46,23 @@ public class Hand extends Item {
 
             if (db.position.name.equals(position.name)) {
                 View.changeColor(position, Color.GRAY);
+                View.updateActions(position, null, null);
             } else {
                 String result = Random.get(db.getOptions(db.hand, db.position, position));
                 Log.debug(result, db.hand.name, db.position.name, position.name);
 
                 if (result.equals("RAISE")) {
                     View.changeColor(position, Color.GREEN);
+                    View.updateActions(position, db.getOptionResult(db.hand, db.position, position), "RAISE");
                 } else if (result.equals("CALL")) {
                     View.changeColor(position, Color.YELLOW);
+                    View.updateActions(position, db.getOptionResult(db.hand, db.position, position), "CALL");
                 } else {
                     View.changeColor(position, Color.RED);
+                    View.updateActions(position, db.getOptionResult(db.hand, db.position, position), "FOLD");
                 }
             }
         }
-
-//        for (Position position : db.positions) {
-//            db.colorPositionsOn(db.position, position);
-//        }
-//
-//        System.out.println(name + " btnClicked");
-//        db.handBtnClicked(getHand(evt.getActionCommand()));
-//        db.rfi = "";
-//        try {
-//            String hand = evt.getActionCommand();
-//            if (db.position.btn == null) {
-//                db.result = "Select the position !";
-//                return;
-//            }
-//            db.rfi += hand + " from " + db.position.name + "\n";
-//            Record handObj = db.records.stream().filter(hh -> hh.result.equals("RFI") && hh.position.equals(db.position.name)).findFirst().get();
-//            db.rfi += handObj.result + " : " + handObj.action + " (" + handObj.percentage + ")" + "\n";
-//            db.result = db.rfi;
-//        } catch (Exception e) {
-//            db.result = "";
-//        }
     }
 
     public String getName() {

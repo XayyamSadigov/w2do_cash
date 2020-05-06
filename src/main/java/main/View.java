@@ -40,4 +40,9 @@ public class View {
         }
     }
 
+    public static void updateActions(Position position, String actionType, String actionValue) {
+        position.actionType.setText(actionType);
+        position.actionValue.setText(actionValue);
+    }
+
 }

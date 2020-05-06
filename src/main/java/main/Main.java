@@ -190,6 +190,18 @@ public final class Main extends javax.swing.JFrame {
         btn_J5s = new javax.swing.JToggleButton();
         btn_J4s = new javax.swing.JToggleButton();
         btn_J3s = new javax.swing.JToggleButton();
+        hj_action_value = new javax.swing.JTextField();
+        utg_action_value = new javax.swing.JTextField();
+        co_action_value = new javax.swing.JTextField();
+        btn_action_value = new javax.swing.JTextField();
+        sb_action_value = new javax.swing.JTextField();
+        bb_action_value = new javax.swing.JTextField();
+        utg_action_type = new javax.swing.JTextField();
+        hj_action_type = new javax.swing.JTextField();
+        co_action_type = new javax.swing.JTextField();
+        btn_action_type = new javax.swing.JTextField();
+        sb_action_type = new javax.swing.JTextField();
+        bb_action_type = new javax.swing.JTextField();
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -1108,25 +1120,61 @@ public final class Main extends javax.swing.JFrame {
         btn_J3s.setText("J3s");
         btn_J3s.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
+        hj_action_value.setEditable(false);
+        hj_action_value.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        hj_action_value.setFocusable(false);
+
+        utg_action_value.setEditable(false);
+        utg_action_value.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        utg_action_value.setFocusable(false);
+
+        co_action_value.setEditable(false);
+        co_action_value.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        co_action_value.setFocusable(false);
+
+        btn_action_value.setEditable(false);
+        btn_action_value.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        btn_action_value.setFocusable(false);
+
+        sb_action_value.setEditable(false);
+        sb_action_value.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        sb_action_value.setFocusable(false);
+
+        bb_action_value.setEditable(false);
+        bb_action_value.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        bb_action_value.setFocusable(false);
+
+        utg_action_type.setEditable(false);
+        utg_action_type.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        utg_action_type.setFocusable(false);
+
+        hj_action_type.setEditable(false);
+        hj_action_type.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        hj_action_type.setFocusable(false);
+
+        co_action_type.setEditable(false);
+        co_action_type.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        co_action_type.setFocusable(false);
+
+        btn_action_type.setEditable(false);
+        btn_action_type.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        btn_action_type.setFocusable(false);
+
+        sb_action_type.setEditable(false);
+        sb_action_type.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        sb_action_type.setFocusable(false);
+
+        bb_action_type.setEditable(false);
+        bb_action_type.setHorizontalAlignment(javax.swing.JTextField.CENTER);
+        bb_action_type.setFocusable(false);
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
             .addGroup(layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(layout.createSequentialGroup()
-                        .addComponent(btn_utg, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_hj, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_co, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_bu, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(btn_sb, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(btn_bb, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                         .addGroup(layout.createSequentialGroup()
                             .addComponent(btn_A3o, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1468,13 +1516,72 @@ public final class Main extends javax.swing.JFrame {
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addComponent(btn_43s, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(btn_42s, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(btn_42s, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(layout.createSequentialGroup()
+                                .addComponent(btn_utg, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addComponent(utg_action_value)
+                            .addComponent(utg_action_type))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(hj_action_type)
+                            .addComponent(btn_hj, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                            .addComponent(hj_action_value))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(co_action_type)
+                            .addComponent(btn_co, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                            .addComponent(co_action_value))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btn_bu, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                                    .addComponent(btn_action_value))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(btn_sb, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE)
+                                    .addComponent(sb_action_value)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, layout.createSequentialGroup()
+                                .addComponent(btn_action_type)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addComponent(sb_action_type, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(btn_bb, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addGroup(layout.createSequentialGroup()
+                                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
+                                    .addComponent(bb_action_type, javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(bb_action_value, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 93, Short.MAX_VALUE))
+                                .addGap(0, 0, Short.MAX_VALUE)))))
+                .addContainerGap())
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(layout.createSequentialGroup()
                 .addContainerGap()
+                .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addGroup(layout.createSequentialGroup()
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(hj_action_type, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(co_action_type, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_action_type, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sb_action_type, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bb_action_type, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(hj_action_value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(co_action_value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(btn_action_value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(sb_action_value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(bb_action_value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(layout.createSequentialGroup()
+                        .addComponent(utg_action_type, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(utg_action_value, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(layout.createSequentialGroup()
                         .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
@@ -1689,12 +1796,12 @@ public final class Main extends javax.swing.JFrame {
     private void initLists() {
 
         db.positions = new ArrayList<>();
-        db.positions.add(new Position(btn_bb));
-        db.positions.add(new Position(btn_bu));
-        db.positions.add(new Position(btn_co));
-        db.positions.add(new Position(btn_hj));
-        db.positions.add(new Position(btn_sb));
-        db.positions.add(new Position(btn_utg));
+        db.positions.add(new Position(btn_bb, bb_action_type, bb_action_value));
+        db.positions.add(new Position(btn_bu, btn_action_type, btn_action_value));
+        db.positions.add(new Position(btn_co, co_action_type, co_action_value));
+        db.positions.add(new Position(btn_hj, hj_action_type, hj_action_value));
+        db.positions.add(new Position(btn_sb, sb_action_type, sb_action_value));
+        db.positions.add(new Position(btn_utg, utg_action_type, utg_action_value));
 
         db.hands = new ArrayList<>();
         db.hands.add(new Hand(btn_22));
@@ -1900,6 +2007,8 @@ public final class Main extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JTextField bb_action_type;
+    private javax.swing.JTextField bb_action_value;
     private javax.swing.JToggleButton btn_22;
     private javax.swing.JToggleButton btn_32o;
     private javax.swing.JToggleButton btn_32s;
@@ -2069,14 +2178,24 @@ public final class Main extends javax.swing.JFrame {
     private javax.swing.JToggleButton btn_T9o;
     private javax.swing.JToggleButton btn_T9s;
     private javax.swing.JToggleButton btn_TT;
+    private javax.swing.JTextField btn_action_type;
+    private javax.swing.JTextField btn_action_value;
     private javax.swing.JToggleButton btn_bb;
     private javax.swing.JToggleButton btn_bu;
     private javax.swing.JToggleButton btn_co;
     private javax.swing.JToggleButton btn_hj;
     private javax.swing.JToggleButton btn_sb;
     private javax.swing.JToggleButton btn_utg;
+    private javax.swing.JTextField co_action_type;
+    private javax.swing.JTextField co_action_value;
+    private javax.swing.JTextField hj_action_type;
+    private javax.swing.JTextField hj_action_value;
     private javax.swing.JScrollPane jScrollPane3;
     private javax.swing.JTable jTable1;
+    private javax.swing.JTextField sb_action_type;
+    private javax.swing.JTextField sb_action_value;
+    private javax.swing.JTextField utg_action_type;
+    private javax.swing.JTextField utg_action_value;
     // End of variables declaration//GEN-END:variables
 
 }

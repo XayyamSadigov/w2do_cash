@@ -1,6 +1,5 @@
 package main;
 
-import java.awt.Color;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -50,6 +49,17 @@ public class db {
         } catch (Exception e) {
             return null;
         }
+    }
+
+    public static String getOptionResult(Hand hand, Position position, Position vs) {
+        for (Record record : records) {
+            if (record.cards.equals(hand.name)
+                    && record.position.equals(position.name)
+                    && record.vs.equals(vs.name)) {
+                return record.result;
+            }
+        }
+        return null;
     }
 
     public static Map<String, Integer> getOptions(Hand hand, Position position) {
