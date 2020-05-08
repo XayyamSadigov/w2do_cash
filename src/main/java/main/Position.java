@@ -6,14 +6,9 @@ import javax.swing.JToggleButton;
 
 public class Position extends Item {
 
-    JTextField actionType;
-    JTextField actionValue;
-
-    public Position(JToggleButton btn, JTextField actionType, JTextField actionValue) {
+    public Position(JToggleButton btn) {
         this.name = btn.getText();
         this.btn = btn;
-        this.actionType = actionType;
-        this.actionValue = actionValue;
 
         btn.addMouseListener(new java.awt.event.MouseAdapter() {
             @Override
@@ -27,14 +22,19 @@ public class Position extends Item {
 
     private void btnClicked(java.awt.event.ActionEvent evt) {
         db.position = db.getPosition(evt.getActionCommand());
-        System.out.println("Hand is: " + db.hand + " " + db.position);
         View.selected(db.position);
+
+        if (db.hand != null && db.position != null) {
+            db.mainFrame.setTitle("w2do | " + db.hand.name + " on " + " " + db.position.name);
+        }
 
         db.hands.forEach((hand) -> {
             if (Random.get(db.getOptions(hand, db.position)).equals("RAISE")) {
                 View.changeColor(hand, Color.GREEN);
+                View.updateToolTip(hand, "RAISE");
             } else {
                 View.changeColor(hand, Color.GRAY);
+                View.updateToolTip(hand, "FOLD");
             }
         });
 
@@ -42,7 +42,7 @@ public class Position extends Item {
             db.positions.forEach((position) -> {
                 if (db.position.name.equals(position.name)) {
                     View.changeColor(position, Color.GRAY);
-                    View.updateActions(position, null, null);
+                    View.updateToolTip(position, null);
                 } else {
                     String result = Random.get(db.getOptions(db.hand, db.position, position));
                     Log.debug(result, db.hand.name, db.position.name, position.name);
@@ -50,15 +50,15 @@ public class Position extends Item {
                     switch (result) {
                         case "RAISE":
                             View.changeColor(position, Color.GREEN);
-                            View.updateActions(position, db.getOptionResult(db.hand, db.position, position), "RAISE");
+                            View.updateToolTip(position, "RAISE");
                             break;
                         case "CALL":
                             View.changeColor(position, Color.YELLOW);
-                            View.updateActions(position, db.getOptionResult(db.hand, db.position, position), "CALL");
+                            View.updateToolTip(position, "CALL");
                             break;
                         default:
                             View.changeColor(position, Color.RED);
-                            View.updateActions(position, db.getOptionResult(db.hand, db.position, position), "FOLD");
+                            View.updateToolTip(position, "FOLD");
                             break;
                     }
                 }

@@ -40,9 +40,8 @@ public class View {
         }
     }
 
-    public static void updateActions(Position position, String actionType, String actionValue) {
-        position.actionType.setText(actionType);
-        position.actionValue.setText(actionValue);
+    public static void updateToolTip(Item item, String text) {
+        item.btn.setToolTipText(text);
     }
 
 }

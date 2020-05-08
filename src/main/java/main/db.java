@@ -5,12 +5,15 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.stream.Collectors;
+import javax.swing.JFrame;
 
 public class db {
 
     public static final List<Record> records = new ArrayList<>();
     public static List<Hand> hands;
     public static List<Position> positions;
+
+    public static JFrame mainFrame;
 
     public static Hand hand;
     public static Position position;
