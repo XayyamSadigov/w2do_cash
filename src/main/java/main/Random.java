@@ -8,7 +8,6 @@ public class Random {
         int randomNumber = (int) Math.round(Math.random() * 100);
         int RAISE;
         int CALL;
-
         if (options.containsKey("RAISE") && options.containsKey("CALL")) {
             RAISE = options.get("RAISE");
             CALL = options.get("CALL");
@@ -18,11 +17,16 @@ public class Random {
                 return "CALL";
             }
         } else if (options.containsKey("RAISE")) {
-            return "RAISE";
+            RAISE = options.get("RAISE");
+            if (randomNumber <= RAISE) {
+                return "RAISE";
+            }
         } else if (options.containsKey("CALL")) {
-            return "CALL";
+            CALL = options.get("CALL");
+            if (randomNumber <= CALL) {
+                return "CALL";
+            }
         }
         return "FOLD";
     }
-
 }
