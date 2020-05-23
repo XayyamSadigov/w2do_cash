@@ -39,43 +39,64 @@ public class db {
         return hands.stream().filter(i -> i.name.equals(name)).findFirst().get();
     }
 
+//    public static Map<String, Integer> getOptions(Hand hand, Position position, Position vs) {
+//        Map<String, Integer> options = new HashMap<>();
+//        try {
+//            for (Record record : records) {
+//                if (record.cards.equals(hand.name)
+//                        && record.position.equals(position.name)
+//                        && record.vs.equals(vs.name)) {
+//                    options.put(record.action, record.percentage);
+//                }
+//            }
+//            return options;
+//        } catch (Exception e) {
+//            return null;
+//        }
+//    }
+//    public static String getOptionResult(Hand hand, Position position, Position vs) {
+//        for (Record record : records) {
+//            if (record.cards.equals(hand.name)
+//                    && record.position.equals(position.name)
+//                    && record.vs.equals(vs.name)) {
+//                return record.result;
+//            }
+//        }
+//        return null;
+//    }
+//    public static Map<String, Integer> getOptions(Hand hand, Position position) {
+//        Map<String, Integer> options = new HashMap<>();
+//        for (Record record : records) {
+//            if (record.cards.equals(hand.name)
+//                    && record.position.equals(position.name)
+//                    && record.result.equals("RFI")) {
+//                options.put(record.action, record.percentage);
+//            }
+//        }
+//        return options;
+//    }
     public static Map<String, Integer> getOptions(Hand hand, Position position, Position vs) {
-        Map<String, Integer> options = new HashMap<>();
-        try {
-            for (Record record : records) {
-                if (record.cards.equals(hand.name)
-                        && record.position.equals(position.name)
-                        && record.vs.equals(vs.name)) {
-                    options.put(record.action, record.percentage);
-                }
-            }
-            return options;
-        } catch (Exception e) {
-            return null;
-        }
+        return records.stream()
+                .filter(record -> record.cards.equals(hand.name)
+                && record.position.equals(position.name)
+                && record.vs.equals(vs.name))
+                .collect(Collectors.toMap(record -> record.action, record -> record.percentage));
     }
 
     public static String getOptionResult(Hand hand, Position position, Position vs) {
-        for (Record record : records) {
-            if (record.cards.equals(hand.name)
-                    && record.position.equals(position.name)
-                    && record.vs.equals(vs.name)) {
-                return record.result;
-            }
-        }
-        return null;
+        return records.stream()
+                .filter(record -> record.cards.equals(hand.name)
+                && record.position.equals(position.name)
+                && record.vs.equals(vs.name))
+                .map(record -> record.result).findFirst().get();
     }
 
     public static Map<String, Integer> getOptions(Hand hand, Position position) {
-        Map<String, Integer> options = new HashMap<>();
-        for (Record record : records) {
-            if (record.cards.equals(hand.name)
-                    && record.position.equals(position.name)
-                    && record.result.equals("RFI")) {
-                options.put(record.action, record.percentage);
-            }
-        }
-        return options;
+        return records.stream()
+                .filter(record -> record.cards.equals(hand.name)
+                && record.position.equals(position.name)
+                && record.result.equals("RFI"))
+                .collect(Collectors.toMap(record -> record.action, record -> record.percentage));
     }
 
     static {
